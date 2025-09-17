@@ -9,7 +9,7 @@ This project serves as a reusable template for building modular, secure, real-ti
 ## Features
 
 - **Generic CRUD**: Easily manage any entity using a reusable repository pattern.
-- **UnitOfWork Pattern**: Encapsulates multiple repositories and ensures transactional consistency.
+- **UnitOfWork Pattern**: Encapsulates multiple repositories and ensures transactional consistency. [Implementing the Repository and Unit of Work patterns in an ASP.NET MVC application](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 - **SignalR**: Real-time notifications to connected clients when entities are modified.
 - **JWT Bearer Authentication**: Secures endpoints using tokens.
 - **Code First**: The database is generated from models using EF Core migrations.
@@ -88,5 +88,6 @@ POST /api/users/login
   "token": "your-jwt-token"
 }
 ```
+
 
 
