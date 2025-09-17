@@ -516,3 +516,5 @@ C:\Users\bs3465\Documents\a\Projet101\obj\Debug\net9.0\refint\Projet101.dll
 C:\Users\bs3465\Documents\a\Projet101\obj\Debug\net9.0\Projet101.pdb
 C:\Users\bs3465\Documents\a\Projet101\obj\Debug\net9.0\Projet101.genruntimeconfig.cache
 C:\Users\bs3465\Documents\a\Projet101\obj\Debug\net9.0\ref\Projet101.dll
+C:\Users\bs3465\Documents\a\Projet101\obj\Debug\net9.0\Projet101.sourcelink.json
+C:\Users\bs3465\Documents\a\Projet101\bin\Debug\net9.0\BCrypt.Net-Next.dll

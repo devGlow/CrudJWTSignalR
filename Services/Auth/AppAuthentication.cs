@@ -45,7 +45,7 @@ namespace Projet101.Services.Auth
             var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, user.Email),
-            new Claim(ClaimTypes.Role, "User")
+            new Claim(ClaimTypes.Role, user.Role)
            // new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
            // new Claim("FirstName", user.FirstName),
            // new Claim("FamilyName", user.FamilyName)
