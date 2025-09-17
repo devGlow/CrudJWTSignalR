@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Projet101.DAL;
+using Projet101.Models;
 using Projet101.Hubs;
 using Projet101.Services.Auth;
 
@@ -24,6 +26,40 @@ namespace Projet101.Controllers
         }
 
 
+
+        [HttpPost("seed")]
+        public void Seed(IUnitOfWork unitOfWork)
+        {
+            if (unitOfWork.UserRepository.Get().Any()) return;
+
+            var users = new List<User>
+            {
+                new User
+                {
+                    Name = "Alice Johnson",
+                    Email = "alice@example.com",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("alice123"), // real BCrypt hash
+                    Role = "User"
+                },
+                new User
+                {
+                    Name = "Bob Smith",
+                    Email = "bob@example.com",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("bob123"),
+                    Role = "Admin"
+                }
+            };
+
+            foreach (var user in users)
+            {
+                unitOfWork.UserRepository.Insert(user);
+            }
+
+            unitOfWork.Save();
+            Console.WriteLine("Users seeded successfully.");
+        }
+
+
         [HttpPost("send-to-group")]
         public async Task<IActionResult> SendMessageToaGroupe()
         {
@@ -32,7 +68,7 @@ namespace Projet101.Controllers
             var message = new { Titre = "This is a test", Message = $"The test has been sent on {DateTime.Now}." };
 
 
-            return Ok(new { Message = $"Notification sent to a groupe" });
+            return Ok(new { Message = message });
 
         }
 
