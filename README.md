@@ -1,6 +1,7 @@
-# CrudHub
+# CrudJWTSignalR
 
-**CrudHub** is a .NET project providing a **generic CRUD API** with **real-time updates** via **SignalR**, using the **UnitOfWork pattern** and secured with **JWT Bearer Authentication**.  
+
+**CrudJWTSignalR** is a .NET project providing a **generic CRUD API** with **real-time updates** via **SignalR**, using the **UnitOfWork pattern** and secured with **JWT Bearer Authentication**.  
 This project serves as a reusable template for building modular, secure, real-time APIs.
 
 ---
@@ -87,4 +88,5 @@ POST /api/users/login
   "token": "your-jwt-token"
 }
 ```
+
 
