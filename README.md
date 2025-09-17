@@ -74,9 +74,10 @@ POST /api/users/login
 
 ## Request body:
 ```
-{
-  "username": "testUser",
-  "password": "testPassword"
+{ 
+    "User":"alice@example.com",
+    "Password":"alice123"
+
 }
 ```
 
@@ -86,3 +87,4 @@ POST /api/users/login
   "token": "your-jwt-token"
 }
 ```
+
